@@ -17,27 +17,58 @@ nav{
 }
 
 .fraction {
-    padding: 0px 50px 50px 100px;
+    padding: 0px 20px 50px 90px;
 }
 button {
-    background-color: #222e35;
-    background-image: url(./images/mechaniccc.png);
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     width: 143px;
     height: 143px;
     border-radius: 8px;
+    font-family: sans-serif;
+    margin-left: 10px;
 }
 
-button:hover {
+.musorsikibtn{
+    background-color: #837126;
+    background-image: url(./images/musorchikiccc.png);
+}
+
+.musorsikibtn:hover{
+    background-color: #C8AE46;
+}
+
+.skitalcibtn{
+    background-color: #16251b;
+    background-image: url(./images/skitalciссс.png);
+}
+
+.skitalcibtn:hover{
+    background-color: #2f5a3e;
+}
+
+.becheniebtn{
+    background-color: #580819;
+    background-image: url(./images/becheniccc.png);
+}
+
+.becheniebtn:hover{
+    background-color: #86132c;
+}
+
+.mechanicbtn {
+    background-color: #222e35;
+    background-image: url(./images/mechaniccc.png);
+}
+
+.mechanicbtn:hover {
     background-color: #35576b;
-    color: white;
 }
 
 h2{
