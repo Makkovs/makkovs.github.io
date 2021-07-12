@@ -5,7 +5,12 @@
 nav{
     font-family: sans-serif;
     background: linear-gradient(#457BBD, #4554BD);
-    color: #DBDDEF;
+    color: #D7DAEC;
     height: 25px;
     padding: 20px 20px 20px 20px;
+}
+
+.content{
+    background: linear-gradient(#4593BD, #3C80A5);
+    height: 730px;
 }
