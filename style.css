@@ -1,1 +1,11 @@
+*{
+    margin: 0;
+}
 
+nav{
+    font-family: sans-serif;
+    background: linear-gradient(#457BBD, #4554BD);
+    color: #D7DAEC;
+    height: 25px;
+    padding: 20px 20px 20px 20px;
+}
