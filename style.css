@@ -1,6 +1,11 @@
 *{
     font-family: sans-serif;
     margin: 0;
+    
+}
+
+body{
+    background: #343b3f;
 }
 
 nav{
@@ -11,7 +16,6 @@ nav{
 }
 
 .content{
-    background: #343b3f;
     height: 730px;
     color: #ffffff;
 }
@@ -33,6 +37,10 @@ button {
     border-radius: 8px;
     font-family: sans-serif;
     margin-left: 10px;
+}
+
+.season{
+    margin-left: 480px;
 }
 
 .firebtn{
@@ -96,6 +104,24 @@ button {
 
 .mechanicbtn:hover {
     background-color: #35576b;
+}
+
+.osnova{
+    background-color: #c5b62a;
+    background-image: url(./images/osnovaccc.png);
+}
+
+.osnova:hover{
+    background-color: #e4d232;
+}
+
+.syndycat{
+    background-color: #8C277A;
+    background-image: url(./images/syndycatccc.png);
+}
+
+.syndycat:hover{
+    background-color: #c039a7;
 }
 
 h2{
