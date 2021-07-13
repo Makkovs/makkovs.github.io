@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Механики</title>
+    <link rel="stylesheet" href=".//fraction.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Цены крафтов Crossout</h1>
+    </nav>
+    <div class = 'content' id = 'content'>
+        <script>
+            let get = location.search;
+            let tmp = (get.substr(1));
+            let fract = tmp.split('=')[1];
+            //console.log(fract);
+            let h; let img; 
+            if(fract == 1){ h = 'Механики'; img = './images/mechaniccc.png';}
+            if(fract == 2){ h = 'Бешеные'; img = './images/becheniccc.png';}
+            if(fract == 3){ h = 'Скитальцы'; img = './images/skitalciссс.png';}
+            if(fract == 4){ h = 'Мусорщики'; img = './images/musorchikiccc.png';}
+            if(fract == 5){ h = 'Степные волки'; img = './images/wolfsccc.png';}
+            if(fract == 6){ h = 'Дети рассвета'; img = './images/childsccc.png';}
+            if(fract == 7){ h = 'Огнепоклонники'; img = './images/fireccc.png';}
+            document.getElementById('content').innerHTML += '<h3>' + h + '</h3> <img src=' + img + ' width="100" height="100">';
+        </script>
+        Редкость деталей:
+        <select>
+            <option>Обычные</option>
+            <option>Редкие</option>
+            <option>Особые</option>
+            <option>Эпические</option>
+            <option>Легендарные</option>
+        </select>
+        <button class="search">Поиск</button>
+    </div>
+</body>
+</html>
