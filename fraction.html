@@ -34,14 +34,37 @@
         </script>
         <div class="slct">
         <span>Редкость деталей:</span>
-        <select>
-            <option>Обычные</option>
-            <option>Редкие</option>
-            <option>Особые</option>
-            <option>Эпические</option>
-            <option>Легендарные</option>
+        <select id="rare">
+            <option value="ob">Обычные</option>
+            <option value="re">Редкие</option>
+            <option value="os">Особые</option>
+            <option value="ep">Эпические</option>
+            <option value="le">Легендарные</option>
         </select>
-        <button class="search">Поиск</button>
+        <button class="search" id="search">Поиск</button>
+        </div>
+        <div class="items" id="items">
+            <script>
+                let searchbtn = document.getElementById("search");
+                searchbtn.addEventListener("click", search);
+                let poisk = 0;
+                function search(){
+                    if(poisk == 0){
+                        let rare = document.querySelector("#rare option:checked").value;
+                        let prices = [6.25/100, 2.79/100]; //метал медь
+                        let mechanicsob = [['П-54М Аккорд', './items/accord.png', (30*prices[0]+6*prices[1]).toFixed(2), 0.64, (0.64-(30*prices[0]+6*prices[1])).toFixed(2)], ['Домкрат', './items/domcrat.png',(20*prices[0]+4*prices[1]).toFixed(2), 0.45, (0.45-(20*prices[0]+4*prices[1])).toFixed(2)],
+                        ['Егерь', './items/eger.png', (75*prices[0]+15*prices[1]).toFixed(2), 3, (3-(75*prices[0]+15*prices[1])).toFixed(2)], ['Спринтер', './items/sprinter.png', (75*prices[0]+15*prices[1]).toFixed(2), 2.42, (2.42-(75*prices[0]+15*prices[1])).toFixed(2)]];
+                        for(let i = 0; i < mechanicsob.length; i++){
+                        document.getElementById('items').innerHTML += '<div class="item"><span>' + mechanicsob[i][0] + '</span><br>\
+                                                                        <img class="itemimg" src=' + mechanicsob[i][1] + ' alt="' + mechanicsob[i][0] + '" width="100px" height="100px"> \
+                                                                        <span class="price0"> Цена крафта: ' + mechanicsob[i][2] + '</span>\
+                                                                        <span class="price1"> Цена продажи: ' + mechanicsob[i][3]+ '</span>\
+                                                                        <span class="price2"> Выгода: ' + mechanicsob[i][4] + '</div>';
+                        }                                             
+                    }
+                    poisk++;
+                }
+            </script>
         </div>
     </div>
 </body>
