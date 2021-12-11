@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.logo{
+    font-style: italic;
+    color: rgb(32, 158, 158);
+    padding: 20px 20px;
+    font-size: 35px;
+}
+
+.content{
+    background-color: rgb(194, 192, 192);
+}
