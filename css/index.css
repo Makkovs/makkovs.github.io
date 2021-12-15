@@ -1,6 +1,11 @@
 *{
     margin: 0;
     font-family: sans-serif;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
 }
 
 .logo{
@@ -10,6 +15,34 @@
     font-size: 35px;
 }
 
+nav{
+    padding: 10px 5px;
+    min-width: 100%;
+    height: 55px;
+    background-color: #228751;
+}
+
+button{
+    height: 55px;
+    background-color: #29a060;
+    border: 1px solid #228751;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+
+button:not(:last-child) {
+    border-right: none;
+}
+
+button:hover{
+    background-color: #1c7445;
+}
+
 .content{
-    background-color: rgb(194, 192, 192);
+    min-height: 100%;
+    background-color: #00b454;
 }
