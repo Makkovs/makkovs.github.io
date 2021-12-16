@@ -22,7 +22,7 @@ nav{
     background-color: #228751;
 }
 
-button{
+.nav-btn{
     height: 55px;
     background-color: #29a060;
     border: 1px solid #228751;
@@ -45,4 +45,19 @@ button:hover{
 .content{
     min-height: 100%;
     background-color: #00b454;
+}
+
+input{
+    margin-top: 2%;
+    margin-left: 33%;
+    border-radius: 3px;
+    border: 3px solid #007B25;
+    width: 400px;
+    height: 150px;
+    text-align: right;
+    font-size: 30px;
+}
+
+.buttons{
+    background-color: #007633;
 }
