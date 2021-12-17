@@ -1,4 +1,10 @@
 function addtxt (numb){
+    if (numb == '-' || numb == '+' || numb == '*' || numb == '÷' || numb == ','){
+        let lastSymb = document.getElementById("#inp").value.slice(-1);
+        if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '÷' || lastSymb == ','){
+            return
+        }
+    }
     document.getElementById("#inp").value += numb;
 };
 document.querySelector("#sev").onclick = function(){addtxt('7')};
@@ -19,3 +25,12 @@ document.querySelector("#dil").onclick = function(){addtxt('÷')};
 document.querySelector("#rav").onclick = function(){
     alert('Пока не работает')
 };
+document.querySelector('#clear').onclick = function(){
+    document.getElementById("#inp").value = ""
+};
+document.querySelector('#delete').onclick = function(){
+    let val = document.getElementById("#inp")
+    let newVal = val.value.slice(0, -1);
+    document.getElementById("#inp").value = newVal
+    
+}

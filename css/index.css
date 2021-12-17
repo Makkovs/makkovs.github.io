@@ -49,6 +49,7 @@ button:hover{
 }
 
 input{
+    background-color: white;
     margin-top: 2%;
     margin-left: 36%;
     border-radius: 3px;
