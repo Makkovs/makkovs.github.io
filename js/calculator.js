@@ -5,8 +5,12 @@ function addtxt (numb){
             return;
         }
     }
+    if (document.getElementById("#inp").value.includes("=")){
+        document.getElementById("#inp").value = ""
+    }
     document.getElementById("#inp").value += numb;
 };
+
 document.querySelector("#sev").onclick = function(){addtxt('7')};
 document.querySelector("#eig").onclick = function(){addtxt('8')};
 document.querySelector("#nine").onclick = function(){addtxt('9')};
@@ -23,7 +27,7 @@ document.querySelector("#toch").onclick = function(){addtxt(',')};
 document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('÷')};
 document.querySelector("#rav").onclick = function(){
-    alert('Пока не работает')
+    addtxt(`=${eval(document.getElementById("#inp").value)}`)
 };
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = ""
