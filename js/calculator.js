@@ -1,7 +1,7 @@
 function addtxt (numb){
     if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == ','){
         let lastSymb = document.getElementById("#inp").value.slice(-1);
-        if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == ','){
+        if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == '.'){
             return;
         }
     }
@@ -23,7 +23,7 @@ document.querySelector("#one").onclick = function(){addtxt('1')};
 document.querySelector("#zero").onclick = function(){addtxt('0')};
 document.querySelector("#plus").onclick = function(){addtxt('+')};
 document.querySelector("#minus").onclick = function(){addtxt('-')};
-document.querySelector("#toch").onclick = function(){addtxt(',')};
+document.querySelector("#toch").onclick = function(){addtxt('.')};
 document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('/')};
 document.querySelector("#rav").onclick = function(){
