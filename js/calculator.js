@@ -6,7 +6,7 @@ function addtxt (numb){
         }
     }
     if (document.getElementById("#inp").value.includes("=")){
-        document.getElementById("#inp").value = ""
+        document.getElementById("#inp").value = "";
     }
     document.getElementById("#inp").value += numb;
 };
@@ -27,14 +27,14 @@ document.querySelector("#toch").onclick = function(){addtxt('.')};
 document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('/')};
 document.querySelector("#rav").onclick = function(){
-    addtxt(`=${eval(document.getElementById("#inp").value)}`)
+    addtxt(`=${eval(document.getElementById("#inp").value)}`);
 };
 document.querySelector('#clear').onclick = function(){
-    document.getElementById("#inp").value = ""
+    document.getElementById("#inp").value = "";
 };
 document.querySelector('#delete').onclick = function(){
     let val = document.getElementById("#inp")
     let newVal = val.value.slice(0, -1);
-    document.getElementById("#inp").value = newVal
+    document.getElementById("#inp").value = newVal;
     
-}
+};

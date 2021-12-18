@@ -1,29 +1,29 @@
 *{
     margin: 0;
-    font-family: sans-serif;
+}
+
+body{
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00b454;
 }
 
-html, body {
+.wrapper{
     height: 100%;
+    min-height: 1000%;
 }
 
-.logo{
-    font-style: italic;
-    color: rgb(32, 158, 158);
-    padding: 20px 20px;
-    font-size: 35px;
-}
+.row-1{
+    display: flex;
+    justify-content: left;
+    align-items:  flex-end;
+    flex-wrap: wrap;
 
-nav{
     padding: 10px 5px;
-    min-width: 100%;
-    height: 55px;
     background-color: #228751;
 }
 
-.nav-btn{
-    height: 55px;
+.row-1 button{
     background-color: #29a060;
     border: 1px solid #228751;
     color: white;
@@ -35,34 +35,35 @@ nav{
     user-select: none;
 }
 
-button:not(:last-child) {
+.row-1 button:not(:last-child) {
     border-right: none;
 }
 
-button:hover{
+.row-1 button:hover{
     background-color: #1c7445;
 }
 
-.content{
-    min-height: 100%;
-    background-color: #00b454;
+.row-2{
+    display: flex;
+    justify-content: center;
+    align-items:  flex-end;
+    flex-wrap: wrap;
 }
 
-input{
+.row-2 input{
+    margin-top: 5px;
     background-color: white;
-    margin-top: 2%;
-    margin-left: 36%;
     border-radius: 3px;
     border: 3px solid #007B25;
-    width: 400px;
-    height: 150px;
+    width: 100%;
+    height: 130px;
     text-align: right;
     font-size: 30px;
 }
 
 .calc-btn{
-    margin-left: 1%;
-    margin-top: 1%;
+    margin-left: 5px;
+    margin-top: 5px;
     text-align: center;
 
     background: #007633;
@@ -80,11 +81,4 @@ input{
 
 .calc-btn:hover{
     background: #025526;
-}
-
-.rows{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
