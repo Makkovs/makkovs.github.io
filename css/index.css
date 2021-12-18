@@ -61,7 +61,7 @@ body{
     font-size: 30px;
 }
 
-.calc-btn{
+.row-2 button{
     margin-left: 5px;
     margin-top: 5px;
     text-align: center;
@@ -79,6 +79,6 @@ body{
     
 }
 
-.calc-btn:hover{
+.row-2 button:hover{
     background: #025526;
 }
