@@ -1,5 +1,10 @@
 function addtxt (numb){
-    if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == ','){
+    if (numb == '+' || numb == '*' || numb == '/' || numb == '.'){
+        if (document.getElementById("#inp").value == ""){
+            return;
+        }
+    }
+    if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == '.'){
         let lastSymb = document.getElementById("#inp").value.slice(-1);
         if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == '.'){
             return;
