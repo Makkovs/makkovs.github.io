@@ -1,5 +1,6 @@
-document.getElementById("number").textContent = '0'
-
+document.getElementById("number").textContent = '0';
+document.getElementById("min").value = '0';
+document.getElementById("max").value = '10';
 
 function randNumb(){
     let min = Math.ceil(document.getElementById("min").value);
@@ -9,3 +10,4 @@ function randNumb(){
 }
 
 document.querySelector("#generate").onclick = randNumb;
+
