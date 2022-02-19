@@ -33,37 +33,6 @@ document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('/')};
 document.querySelector("#equal").onclick = function(){
     binToDec(document.getElementById('#inp').value)
-/*
-    mathDegree = lambda a, b : a*(2**b)
-    decimal = 0
-
-    for d in enumerate(splitedBin):
-        degree = len(splitedBin) - d[0] - 1
-        if degree < 0:
-            break
-        decimal += mathDegree(int(d[1]), degree)
-
-    self.e2.config(state = NORMAL)
-    self.e2.delete(0, 'end')
-    self.e2.insert(0, str(decimal))
-    self.e2.config(state = DISABLED)
-*/
-/*
-binary = ''
-if dec == 1:
-    binary = '1'
-else:
-    numbs = []
-    while int(dec) >= 2:
-        dec = int(dec)/2
-        if dec == int(dec):
-            numbs.append('0')
-        else:
-            numbs.append('1')
-        if int(dec) == 1:
-            numbs.append('1')
-    numbsLenght = len(numbs) - 1
-*/
 };
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = "";
