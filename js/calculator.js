@@ -5,13 +5,17 @@ function addtxt (numb){
         }
     }
     if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == '.'){
+        if (document.getElementById("#inp").value.includes("=")){
+            let res = document.getElementById("#inp").value.split("=");
+            document.getElementById("#inp").value = res[res.length - 1];
+        }
         let lastSymb = document.getElementById("#inp").value.slice(-1);
         if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == '.'){
             return;
         }
     }
     if (document.getElementById("#inp").value.includes("=")){
-        document.getElementById("#inp").value = "";
+        document.getElementById("#inp").value = '';
     }
     document.getElementById("#inp").value += numb;
 };
