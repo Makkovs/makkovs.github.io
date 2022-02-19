@@ -43,6 +43,7 @@ document.querySelector("#equal").onclick = function(){
         numbs = numbs.replace(new RegExp(String(bins[i]), 'g'), binToDec(bins[i]));
     }
     let result = eval(numbs);
+    document.getElementById("#ninp").value = Math.floor(result); //Дроби пока не учитываю 
     let resultBin = '';
     for (let dec = result; dec >= 1; ){
         dec = Math.floor(dec)/2;

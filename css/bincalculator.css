@@ -50,13 +50,21 @@ body{
     flex-wrap: wrap;
 }
 
+.ninp{
+    width: 100%;
+    height: 30px;
+}
+
+.inp{
+    width: 100%;
+    height: 100px;
+}
+
 .row-2 input{
     margin-top: 5px;
     background-color: white;
     border-radius: 3px;
     border: 3px solid #007B25;
-    width: 100%;
-    height: 130px;
     text-align: right;
     font-size: 30px;
 }
