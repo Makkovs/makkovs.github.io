@@ -52,9 +52,11 @@ document.querySelector("#equal").onclick = function(){
     console.log(resultBin);
     document.getElementById("#inp").value += `=${resultBin.split('').reverse().join('')}`;
 };
+
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = "";
 };
+
 document.querySelector('#delete').onclick = function(){
     let val = document.getElementById("#inp")
     let newVal = val.value.slice(0, -1);
