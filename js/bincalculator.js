@@ -22,7 +22,7 @@ function binToDec (bin){
     for (let i = 0; i < splitedBin.length; i++){
         numb += Number(splitedBin[i])*(2**(splitedBin.length - (i+1)));
     };
-   return numb;
+    return numb;
 }
 
 document.querySelector("#one").onclick = function(){addtxt('1')};
@@ -31,39 +31,26 @@ document.querySelector("#plus").onclick = function(){addtxt('+')};
 document.querySelector("#minus").onclick = function(){addtxt('-')};
 document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('/')};
+
 document.querySelector("#equal").onclick = function(){
-    binToDec(document.getElementById('#inp').value)
-/*
-    mathDegree = lambda a, b : a*(2**b)
-    decimal = 0
-
-    for d in enumerate(splitedBin):
-        degree = len(splitedBin) - d[0] - 1
-        if degree < 0:
-            break
-        decimal += mathDegree(int(d[1]), degree)
-
-    self.e2.config(state = NORMAL)
-    self.e2.delete(0, 'end')
-    self.e2.insert(0, str(decimal))
-    self.e2.config(state = DISABLED)
-*/
-/*
-binary = ''
-if dec == 1:
-    binary = '1'
-else:
-    numbs = []
-    while int(dec) >= 2:
-        dec = int(dec)/2
-        if dec == int(dec):
-            numbs.append('0')
-        else:
-            numbs.append('1')
-        if int(dec) == 1:
-            numbs.append('1')
-    numbsLenght = len(numbs) - 1
-*/
+    let bins = document.getElementById('#inp').value.split(/\*|\+|\-|\//);
+    let numbs = document.getElementById('#inp').value;
+    for (let i = 0; i < bins.length; i++){
+        numbs = numbs.replace(new RegExp(String(bins[i]), 'g'), binToDec(bins[i]));
+    }
+    let result = eval(numbs);
+    let resultBin = '';
+    for (let dec = result; dec >= 1; ){
+        dec = Math.floor(dec)/2;
+        console.log(dec);
+        if (Number.isInteger(dec)){
+            resultBin += '0';
+        }else{
+            resultBin += '1';
+        };
+    };
+    console.log(resultBin);
+    document.getElementById("#inp").value += `=${resultBin.split('').reverse().join('')}`;
 };
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = "";
