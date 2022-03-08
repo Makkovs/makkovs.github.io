@@ -28,6 +28,7 @@ function binToDec (bin){
     };
     return numb;    
 }
+
 document.querySelector("#one").onclick = function(){addtxt('1')};
 document.querySelector("#zero").onclick = function(){addtxt('0')};
 document.querySelector("#plus").onclick = function(){addtxt('+')};
@@ -41,7 +42,7 @@ document.querySelector("#equal").onclick = function(){
         numbs = numbs.replace(new RegExp(String(bins[i]), 'g'), binToDec(bins[i]));
     }
     let result = eval(numbs);
-    document.getElementById("#ninp").value = Math.floor(result);
+    document.getElementById("#ninp").value = `${numbs}=${Math.floor(result)}`;
     let resultBin = '';
     for (let dec = result; dec >= 1; ){
         dec = Math.floor(dec)/2;
@@ -55,9 +56,11 @@ document.querySelector("#equal").onclick = function(){
     console.log(resultBin);
     document.getElementById("#inp").value += `=${resultBin.split('').reverse().join('')}`;
 };
+
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = "";
 };
+
 document.querySelector('#delete').onclick = function(){
     let val = document.getElementById("#inp")
     let newVal = val.value.slice(0, -1);
