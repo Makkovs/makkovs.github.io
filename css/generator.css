@@ -48,7 +48,7 @@ body{
     border-radius: 3px;
     border: 3px solid #007B25;
     text-align: right;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .column-2{
@@ -76,4 +76,16 @@ body{
 
 .row-2 button:hover{
     background: #025526;
+}
+
+input[type="range"] {
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+}
+
+form {
+    user-select: none;
 }

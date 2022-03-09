@@ -19,7 +19,7 @@
                     <div class="item"><a href="random.html"><button>Рандомайзер</button></a></div>
                 </div>
                 <div class="column-1">
-                    <div class="item"><a href="bincalculator.html"><button>Бинарный калькулятор</button></a></div>
+                    <div class="item"><a href="bincalculator.html"><button>Двоичный калькулятор</button></a></div>
                 </div>
                 <div class="column-1">
                     <div class="item"><button>Переводчик чисел</button></div>
@@ -31,19 +31,26 @@
         </div>
         <div class="block-2">
             <div class="row-2">
-                <div class="column-2"><input type="text"></div>
+                <div class="column-2"><input type="text" id="password" readonly></div>
             </div>
             <div class="row-2">
                 <div class="column-2"><button class="generate" id="generate">Генерировать</button></div>
             </div>
             <div class="row-2">
                 <div class="column-2">
+                    <form oninput="numblenght.value=passlenght.value">
+                        <big>Длина пароля:</big>
+                        <input type="range" id="passlenght" name="passlenght" value="8" max="30">
+                        <big><output name="numblenght">8</output></big> 
+                    </form>
                     <input type="checkbox" id="usenumbs" name="usenumbs" value="numbers">
-                    <label for="usenumbs">Использовать цифры</label><br>
+                    <label for="usenumbs"><big>Использовать цифры</big></label><br>
                     <input type="checkbox" id="useletter" name="useletter" value="letters">
-                    <label for="useletter">Использовать буквы</label><br>
+                    <label for="useletter"><big>Использовать буквы</big></label><br>
                     <input type="checkbox" id="usespec" name="usespec" value="specsymbols">
-                    <label for="usespec">Использовать спецсимволы (!, ?, /, *, &, +, -)</label><br>
+                    <label for="usespec"><big>Использовать спецсимволы</big></label><br>
+                    <input type="checkbox" id="usebig" name="usebig" value="bigsymbols">
+                    <label for="usebig"><big>Использовать большие буквы</big></label>
                 </div>
             </div>
         </div>
