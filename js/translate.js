@@ -19,7 +19,7 @@ function binToDec (bin){
     for (let i = 0; i < splitedBin.length; i++){
         numb += Number(splitedBin[i])*(2**(splitedBin.length - (i+1)));
     };
-    return numb;    
+    return numb;
 }
 
 function decToBin (dec){
@@ -44,11 +44,11 @@ document.querySelector("#translate").onclick = function(){
         if (decnumb.length > 0){
             let bin = decToBin(decnumb);
             document.getElementById('binnumber').value = bin.split('').reverse().join('');
-        }
+        };
     }else{
         if (binnumb.length > 0){   
             let dec = binToDec(binnumb);
             document.getElementById('decnumber').value = dec;
-        }
+        };
     };
 };
