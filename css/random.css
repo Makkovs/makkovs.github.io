@@ -5,7 +5,8 @@
 body{
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #00b454;
+    background-color: #a0abb1;
+    color: white;
 }
 
 .wrapper{
@@ -20,12 +21,12 @@ body{
     flex-wrap: wrap;
 
     padding: 10px 5px;
-    background-color: #228751;
+    background-color: #72747a;
 }
 
 .row-1 button{
-    background-color: #29a060;
-    border: 1px solid #228751;
+    background-color: #868583;
+    border: 1px solid #7e7d7c;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -40,7 +41,7 @@ body{
 }
 
 .row-1 button:hover{
-    background-color: #1c7445;
+    background-color: #d1d9dc;
 }
 
 .row-2{
@@ -62,7 +63,7 @@ body{
 
 .row-2 input{
     font-size: 16px;
-    border: 1px solid black;
+    border: 2px solid #72747a;
     border-radius: 2px;
     text-align: right;
 }
@@ -82,8 +83,7 @@ body{
 
 .row-2 button{
     margin-left: 15%;
-    background-color: #007633;
-    border: 1px solid #228751;
+    background-color: #868583;
     border-radius: 3px;
     color: white;
     padding: 15px 32px;
@@ -92,6 +92,7 @@ body{
     cursor: pointer;
     float: left;
     user-select: none;
+    border: none;
 }
 
 .row-2 button:not(:last-child) {
@@ -99,7 +100,7 @@ body{
 }
 
 .row-2 button:hover{
-    background-color: #1c7445;
+    background-color: #d1d9dc;
 }
 
 .row-3{
@@ -111,8 +112,7 @@ body{
 
 .row-3 button{
     margin-left: 15%;
-    background-color: #007633;
-    border: 1px solid #228751;
+    background-color: #868583;
     border-radius: 3px;
     color: white;
     padding: 15px 32px;
@@ -121,6 +121,7 @@ body{
     cursor: pointer;
     float: left;
     user-select: none;
+    border: none;
 }
 
 .row-3 button:not(:last-child) {
@@ -128,5 +129,5 @@ body{
 }
 
 .row-3 button:hover{
-    background-color: #1c7445;
+    background-color: #d1d9dc;
 }

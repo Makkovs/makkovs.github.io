@@ -1,3 +1,10 @@
+const test = {
+    'sin(' : 'Math.sin(', 'sinh(' : 'Math.sinh(',
+    'tan(' : 'Math.tan(', 'tanh(' : 'Math.tanh(',
+    'cosh(' : 'Math.cosh(', 'cos(' : 'Math.cos(', 
+    'csc(' : '1/Math.sin(', 'sec(' : '1/Math.cos('
+}
+
 function addtxt (numb){
     if (numb == '+' || numb == '*' || numb == '/' || numb == '.'){
         if (document.getElementById("#inp").value == ""){
@@ -35,8 +42,20 @@ document.querySelector("#minus").onclick = function(){addtxt('-')};
 document.querySelector("#toch").onclick = function(){addtxt('.')};
 document.querySelector("#mnoz").onclick = function(){addtxt('*')};
 document.querySelector("#dil").onclick = function(){addtxt('/')};
+document.querySelector("#pi").onclick = function(){addtxt('3.1415926535')};
+document.querySelector("#bracket1").onclick = function(){addtxt('(')};
+document.querySelector("#bracket2").onclick = function(){addtxt(')')};
+document.querySelector("#sin").onclick = function(){addtxt('sin(')};
+document.querySelector('#sinh').onclick = function(){addtxt('sinh(')};
+document.querySelector('#tan').onclick = function(){addtxt('tan(')};
+document.querySelector('#tanh').onclick = function(){addtxt('tanh(')};
+document.querySelector('#cos').onclick = function(){addtxt('cos(')};
+document.querySelector('#cosh').onclick = function(){addtxt('cosh(')};
+document.querySelector('#csc').onclick = function(){addtxt('csc(')};
+document.querySelector('#sec').onclick = function(){addtxt('sec(')};
 document.querySelector("#equal").onclick = function(){
-    addtxt(`=${eval(document.getElementById("#inp").value)}`);
+    let replaced = document.getElementById("#inp").value.replaceAll(/sin\(|sinh\(|tan\(|tanh\(|cos\(|cosh\(|csc\(|sec\(/g, (x) => test[x]);
+    addtxt(`=${eval(replaced)}`);
 };
 document.querySelector('#clear').onclick = function(){
     document.getElementById("#inp").value = "";
