@@ -70,6 +70,7 @@ body{
 
 .number{
     font-size: 120px;
+    margin-left: 35%;
 }
 
 .numberText{
@@ -78,11 +79,11 @@ body{
 }
 
 .textMarg{
-    margin-left: 15%;
+    margin-left: 25%;
 }
 
 .row-2 button{
-    margin-left: 15%;
+    margin-top: 5%;
     background-color: #868583;
     border-radius: 3px;
     color: white;
@@ -104,14 +105,13 @@ body{
 }
 
 .row-3{
-    margin-top: 5%;
+    margin-top: 1%;
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
 .row-3 button{
-    margin-left: 15%;
     background-color: #868583;
     border-radius: 3px;
     color: white;

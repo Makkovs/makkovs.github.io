@@ -2,22 +2,26 @@ const test = {
     'sin(' : 'Math.sin(', 'sinh(' : 'Math.sinh(',
     'tan(' : 'Math.tan(', 'tanh(' : 'Math.tanh(',
     'cosh(' : 'Math.cosh(', 'cos(' : 'Math.cos(', 
-    'csc(' : '1/Math.sin(', 'sec(' : '1/Math.cos('
+    'csc(' : '1/Math.sin(', 'sec(' : '1/Math.cos(', 
+    '^' : '**'
 }
 
 function addtxt (numb){
-    if (numb == '+' || numb == '*' || numb == '/' || numb == '.'){
+    if (numb == '+' || numb == '*' || numb == '/' || numb == '.' || numb == '^' || numb == '!'){
         if (document.getElementById("#inp").value == ""){
             return;
         }
     }
-    if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == '.'){
+    if (numb == '-' || numb == '+' || numb == '*' || numb == '/' || numb == '.' || numb == '^' || numb == '!'){
         if (document.getElementById("#inp").value.includes("=")){
             let res = document.getElementById("#inp").value.split("=");
             document.getElementById("#inp").value = res[res.length - 1];
         }
         let lastSymb = document.getElementById("#inp").value.slice(-1);
-        if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == '.'){
+        if (lastSymb == '-' || lastSymb == '+' || lastSymb == '*' || lastSymb == '/' || lastSymb == '.' || lastSymb == '^'){
+            return;
+        }
+        if (lastSymb == '!' && numb == '!'){
             return;
         }
     }
@@ -53,8 +57,10 @@ document.querySelector('#cos').onclick = function(){addtxt('cos(')};
 document.querySelector('#cosh').onclick = function(){addtxt('cosh(')};
 document.querySelector('#csc').onclick = function(){addtxt('csc(')};
 document.querySelector('#sec').onclick = function(){addtxt('sec(')};
+document.querySelector('#percent').onclick = function(){addtxt('%')};
+document.querySelector('#stepen').onclick = function(){addtxt('^')};
 document.querySelector("#equal").onclick = function(){
-    let replaced = document.getElementById("#inp").value.replaceAll(/sin\(|sinh\(|tan\(|tanh\(|cos\(|cosh\(|csc\(|sec\(/g, (x) => test[x]);
+    let replaced = document.getElementById("#inp").value.replaceAll(/sin\(|sinh\(|tan\(|tanh\(|cos\(|cosh\(|csc\(|sec\(|\^/g, (x) => test[x]);
     addtxt(`=${eval(replaced)}`);
 };
 document.querySelector('#clear').onclick = function(){
