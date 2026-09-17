@@ -1,0 +1,214 @@
+:root {
+    --title-color: #092056;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #FAFAF8;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.image {
+    max-width: 300px;
+    max-height: 300px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: #F9F3E7;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.position {
+    color: #A8BBB1;
+    font-size: 14px;
+}
+
+.name {
+    color: var(--title-color);
+    margin-top: 10px;
+}
+
+.about {
+    color: #000000;
+    display: block;
+    font-size: 16px;
+    max-width: 500px;
+    margin: 15px 0px 15px 0px;
+}
+
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+    color: #FAFAF8;
+    text-decoration: none;
+    background-color: #039B61;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'main-info'
+        'languages'
+        'contacts'
+        'education'
+        'skills'
+        'frontend'
+        'backend'
+        'data'
+        'projects'
+        'translate-words'
+        'job-analys'
+        'checkmymoney';
+    padding: 0 15px;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'main-info main-info main-info'
+            'languages contacts education'
+            'skills skills skills'
+            'frontend backend data'
+            'projects projects projects'
+            'translate-words job-analys checkmymoney';
+        padding: 0 5vw;
+    }
+}
+
+.content-title {
+    color: var(--title-color);
+    border-bottom: 1px solid var(--title-color);
+}
+
+.main-info {
+    grid-area: main-info;
+}
+
+.languages {
+    grid-area: languages
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+.education {
+    grid-area: education;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.frontend {
+    grid-area: frontend;
+}
+
+.backend {
+    grid-area: backend;
+}
+
+.data {
+    grid-area: data;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.job-analys {
+    grid-area: job-analys;
+}
+
+.translate-words {
+    grid-area: translate-words;
+}
+
+.checkmymoney {
+    grid-area: checkmymoney;
+}
+
+.content-container {
+    opacity: 0.9;
+    text-align: left;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10vw;
+}
+
+.content-container {
+    margin-right: 20px;
+}
+
+.group-title {
+    color: var(--title-color);
+}
+
+.content-list {
+    padding: 5px;
+    list-style: none;
+}
+
+.content-list li {
+    margin: 10px 0px 10px 0px;
+}
+
+.list-info {
+    color: #6c8f90;
+}
+
+.circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ACC1E1;
+    margin-left: 1px;
+}
+
+.active {
+    background: #0D78E1;
+}
+
+.link {
+    color: #8d94a4
+}
