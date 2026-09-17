@@ -85,9 +85,9 @@ body {
         'contacts'
         'education'
         'skills'
-        'frontend'
-        'backend'
-        'data'
+        'section-1'
+        'section-2'
+        'section-3'
         'projects'
         'translate-words'
         'job-analys'
@@ -103,7 +103,7 @@ body {
             'main-info main-info main-info'
             'languages contacts education'
             'skills skills skills'
-            'frontend backend data'
+            'section-1 section-2 section-3'
             'projects projects projects'
             'translate-words job-analys checkmymoney';
         padding: 0 5vw;
@@ -135,16 +135,16 @@ body {
     grid-area: skills;
 }
 
-.frontend {
-    grid-area: frontend;
+.section-1 {
+    grid-area: section-1;
 }
 
-.backend {
-    grid-area: backend;
+.section-2 {
+    grid-area: section-2;
 }
 
-.data {
-    grid-area: data;
+.section-3 {
+    grid-area: section-3;
 }
 
 .projects {
