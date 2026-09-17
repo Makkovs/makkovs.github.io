@@ -29,6 +29,8 @@ body {
     height: 30vw;
     border-radius: 50%;
     background-color: #F9F3E7;
+    background: url("../files/img.jpg");
+    background-size: cover;
 }
 
 .info {
